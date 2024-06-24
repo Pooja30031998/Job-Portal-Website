@@ -1,0 +1,178 @@
+<div class="container-homepage">
+  <div class="d-flex align-items-center justify-content-center">
+    <div class="left p-2">
+      <h1 class="heading">A COMPREHENSIVE PLATFORM</h1>
+      <h2 class="heading">FOR JOB SEEKERS AND RECRUITERS</h2>
+      <h2
+        class="text-white animate__animated animate__fadeIn animate__infinite infinite"
+      >
+        job opportunities and internships
+      </h2>
+      <h5 class="text-white">Get Discovered. Get Hired</h5>
+      <div class="action-buttons">
+        <a href="/jobs" class="btn btn-lg lbtn"> I'm A Job Seeker </a>
+        <% if(!locals.userEmail){ %>
+        <button
+          type="button"
+          class="btn btn-lg lbtn"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          I'm a Recruiter
+        </button>
+        <% } %> <% if(locals.userEmail){ %>
+        <a class="btn btn-lg lbtn" href="/jobs">I'm a Recruiter</a>
+        <% } %>
+      </div>
+    </div>
+    <div><img src="images/main.png" /></div>
+  </div>
+</div>
+
+<!-- recruiters modal -->
+
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title bold" id="staticBackdropLabel">
+          Experience easily!
+        </h3>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form action="/register" method="post" class="p-2">
+          <div class="mb-3">
+            <div class="input-group">
+              <span class="input-group-text">Name</span>
+              <input
+                required
+                name="name"
+                type="text"
+                aria-label="name"
+                class="form-control"
+                placeholder="enter your name"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="input-group">
+              <span class="input-group-text">Email</span>
+              <input
+                required
+                name="email"
+                type="email"
+                aria-label="email"
+                class="form-control"
+                placeholder="enter your email"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="input-group">
+              <span class="input-group-text">Password</span>
+              <input
+                required
+                name="password"
+                type="password"
+                aria-label="password"
+                class="form-control"
+                placeholder="enter your password"
+              />
+            </div>
+            <button type="submit" class="btn btn-md mt-2 lbtn">Register</button>
+          </div>
+          <div class="modal-footer">
+            <span>Already Registered?</span>
+            <button
+              type="button"
+              class="btn btn-sm px-3 btn-outline-success"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- login modal -->
+<div
+  class="modal fade"
+  id="loginModal"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="loginModelToggleLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form action="/login" method="post" class="p-2">
+          <div class="mb-3">
+            <div class="input-group">
+              <span class="input-group-text">Email</span>
+              <input
+                required
+                name="email"
+                type="email"
+                aria-label="email"
+                class="form-control"
+                placeholder="enter your email"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="input-group">
+              <span class="input-group-text">Password</span>
+              <input
+                required
+                name="password"
+                type="password"
+                aria-label="password"
+                class="form-control"
+                placeholder="enter your password"
+              />
+            </div>
+            <button type="submit" class="btn btn-md mt-2 lbtn">Login</button>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-sm px-3 btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
