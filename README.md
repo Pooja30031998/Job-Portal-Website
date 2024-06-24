@@ -32,7 +32,6 @@ The Job Portal Website (named Easily) is built with an MVC (Model View Controlle
     - views: Contains EJS templates.
 - public: Stores static assets (CSS, JS, Images).
     - resume: Stores uploaded resume files.
-- tests: Contains test files.
 
 # Technologies Used
 - Node.js
