@@ -28,10 +28,10 @@ The Job Portal Website (named Easily) is built with an MVC (Model View Controlle
     - controllers: Handles application logic.
     - middlewares: Contains middleware functions.
     - models: Defines data models.
-    - public: Stores static assets.
     - routes: Defines application routes.
     - views: Contains EJS templates.
-- uploads: Stores uploaded resume files.
+- public: Stores static assets (CSS, JS, Images).
+    - resume: Stores uploaded resume files.
 - tests: Contains test files.
 
 # Technologies Used
